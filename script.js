@@ -15,98 +15,1697 @@ const maze = {
   },
   maze: [
     [
-      { row: 0, col: 0, north: true, east: false, west: true, south: true },
-      { row: 0, col: 1, north: true, east: true, west: false, south: false },
-      { row: 0, col: 2, north: true, east: false, west: true, south: false },
-      { row: 0, col: 3, north: true, east: true, west: false, south: false },
-      { row: 0, col: 4, north: true, east: false, west: true, south: true },
-      { row: 0, col: 5, north: true, east: false, west: false, south: false },
-      { row: 0, col: 6, north: true, east: true, west: false, south: false },
+      {
+        row: 0,
+        col: 0,
+        north: true,
+        east: false,
+        west: true,
+        south: true,
+        visited: false,
+      },
+      {
+        row: 0,
+        col: 1,
+        north: true,
+        east: true,
+        west: false,
+        south: false,
+        visited: false,
+      },
+      {
+        row: 0,
+        col: 2,
+        north: true,
+        east: false,
+        west: true,
+        south: false,
+        visited: false,
+      },
+      {
+        row: 0,
+        col: 3,
+        north: true,
+        east: true,
+        west: false,
+        south: false,
+        visited: false,
+      },
+      {
+        row: 0,
+        col: 4,
+        north: true,
+        east: false,
+        west: true,
+        south: true,
+        visited: false,
+      },
+      {
+        row: 0,
+        col: 5,
+        north: true,
+        east: false,
+        west: false,
+        south: false,
+        visited: false,
+      },
+      {
+        row: 0,
+        col: 6,
+        north: true,
+        east: true,
+        west: false,
+        south: false,
+        visited: false,
+      },
     ],
     [
-      { row: 1, col: 0, north: true, east: true, west: true, south: false },
-      { row: 1, col: 1, north: false, east: false, west: true, south: true },
-      { row: 1, col: 2, north: false, east: true, west: false, south: true },
-      { row: 1, col: 3, north: false, east: true, west: true, south: false },
-      { row: 1, col: 4, north: true, east: false, west: true, south: false },
-      { row: 1, col: 5, north: false, east: true, west: false, south: true },
-      { row: 1, col: 6, north: false, east: true, west: true, south: false },
+      {
+        row: 1,
+        col: 0,
+        north: true,
+        east: true,
+        west: true,
+        south: false,
+        visited: false,
+      },
+      {
+        row: 1,
+        col: 1,
+        north: false,
+        east: false,
+        west: true,
+        south: true,
+        visited: false,
+      },
+      {
+        row: 1,
+        col: 2,
+        north: false,
+        east: true,
+        west: false,
+        south: true,
+        visited: false,
+      },
+      {
+        row: 1,
+        col: 3,
+        north: false,
+        east: true,
+        west: true,
+        south: false,
+        visited: false,
+      },
+      {
+        row: 1,
+        col: 4,
+        north: true,
+        east: false,
+        west: true,
+        south: false,
+        visited: false,
+      },
+      {
+        row: 1,
+        col: 5,
+        north: false,
+        east: true,
+        west: false,
+        south: true,
+        visited: false,
+      },
+      {
+        row: 1,
+        col: 6,
+        north: false,
+        east: true,
+        west: true,
+        south: false,
+        visited: false,
+      },
     ],
     [
-      { row: 2, col: 0, north: false, east: false, west: true, south: false },
-      { row: 2, col: 1, north: true, east: false, west: false, south: true },
-      { row: 2, col: 2, north: true, east: false, west: false, south: true },
-      { row: 2, col: 3, north: false, east: true, west: false, south: true },
-      { row: 2, col: 4, north: false, east: true, west: true, south: false },
-      { row: 2, col: 5, north: true, east: false, west: true, south: false },
-      { row: 2, col: 6, north: false, east: true, west: false, south: true },
+      {
+        row: 2,
+        col: 0,
+        north: false,
+        east: false,
+        west: true,
+        south: false,
+        visited: false,
+      },
+      {
+        row: 2,
+        col: 1,
+        north: true,
+        east: false,
+        west: false,
+        south: true,
+        visited: false,
+      },
+      {
+        row: 2,
+        col: 2,
+        north: true,
+        east: false,
+        west: false,
+        south: true,
+        visited: false,
+      },
+      {
+        row: 2,
+        col: 3,
+        north: false,
+        east: true,
+        west: false,
+        south: true,
+        visited: false,
+      },
+      {
+        row: 2,
+        col: 4,
+        north: false,
+        east: true,
+        west: true,
+        south: false,
+        visited: false,
+      },
+      {
+        row: 2,
+        col: 5,
+        north: true,
+        east: false,
+        west: true,
+        south: false,
+        visited: false,
+      },
+      {
+        row: 2,
+        col: 6,
+        north: false,
+        east: true,
+        west: false,
+        south: true,
+        visited: false,
+      },
     ],
     [
-      { row: 3, col: 0, north: false, east: false, west: true, south: true },
-      { row: 3, col: 1, north: true, east: true, west: false, south: false },
-      { row: 3, col: 2, north: true, east: false, west: true, south: false },
-      { row: 3, col: 3, north: true, east: false, west: false, south: true },
-      { row: 3, col: 4, north: false, east: true, west: false, south: true },
-      { row: 3, col: 5, north: false, east: true, west: true, south: false },
-      { row: 3, col: 6, north: true, east: true, west: true, south: false },
+      {
+        row: 3,
+        col: 0,
+        north: false,
+        east: false,
+        west: true,
+        south: true,
+        visited: false,
+      },
+      {
+        row: 3,
+        col: 1,
+        north: true,
+        east: true,
+        west: false,
+        south: false,
+        visited: false,
+      },
+      {
+        row: 3,
+        col: 2,
+        north: true,
+        east: false,
+        west: true,
+        south: false,
+        visited: false,
+      },
+      {
+        row: 3,
+        col: 3,
+        north: true,
+        east: false,
+        west: false,
+        south: true,
+        visited: false,
+      },
+      {
+        row: 3,
+        col: 4,
+        north: false,
+        east: true,
+        west: false,
+        south: true,
+        visited: false,
+      },
+      {
+        row: 3,
+        col: 5,
+        north: false,
+        east: true,
+        west: true,
+        south: false,
+        visited: false,
+      },
+      {
+        row: 3,
+        col: 6,
+        north: true,
+        east: true,
+        west: true,
+        south: false,
+        visited: false,
+      },
     ],
     [
-      { row: 4, col: 0, north: true, east: false, west: true, south: false },
-      { row: 4, col: 1, north: false, east: true, west: false, south: true },
-      { row: 4, col: 2, north: false, east: false, west: true, south: true },
-      { row: 4, col: 3, north: true, east: true, west: false, south: false },
-      { row: 4, col: 4, north: true, east: true, west: true, south: false },
-      { row: 4, col: 5, north: false, east: true, west: true, south: false },
-      { row: 4, col: 6, north: false, east: true, west: true, south: false },
+      {
+        row: 4,
+        col: 0,
+        north: true,
+        east: false,
+        west: true,
+        south: false,
+        visited: false,
+      },
+      {
+        row: 4,
+        col: 1,
+        north: false,
+        east: true,
+        west: false,
+        south: true,
+        visited: false,
+      },
+      {
+        row: 4,
+        col: 2,
+        north: false,
+        east: false,
+        west: true,
+        south: true,
+        visited: false,
+      },
+      {
+        row: 4,
+        col: 3,
+        north: true,
+        east: true,
+        west: false,
+        south: false,
+        visited: false,
+      },
+      {
+        row: 4,
+        col: 4,
+        north: true,
+        east: true,
+        west: true,
+        south: false,
+        visited: false,
+      },
+      {
+        row: 4,
+        col: 5,
+        north: false,
+        east: true,
+        west: true,
+        south: false,
+        visited: false,
+      },
+      {
+        row: 4,
+        col: 6,
+        north: false,
+        east: true,
+        west: true,
+        south: false,
+        visited: false,
+      },
     ],
     [
-      { row: 5, col: 0, north: false, east: false, west: true, south: true },
-      { row: 5, col: 1, north: true, east: false, west: false, south: true },
-      { row: 5, col: 2, north: true, east: false, west: false, south: true },
-      { row: 5, col: 3, north: false, east: true, west: false, south: true },
-      { row: 5, col: 4, north: false, east: false, west: true, south: true },
-      { row: 5, col: 5, north: false, east: false, west: false, south: true },
-      { row: 5, col: 6, north: false, east: true, west: false, south: true },
+      {
+        row: 5,
+        col: 0,
+        north: false,
+        east: false,
+        west: true,
+        south: true,
+        visited: false,
+      },
+      {
+        row: 5,
+        col: 1,
+        north: true,
+        east: false,
+        west: false,
+        south: true,
+        visited: false,
+      },
+      {
+        row: 5,
+        col: 2,
+        north: true,
+        east: false,
+        west: false,
+        south: true,
+        visited: false,
+      },
+      {
+        row: 5,
+        col: 3,
+        north: false,
+        east: true,
+        west: false,
+        south: true,
+        visited: false,
+      },
+      {
+        row: 5,
+        col: 4,
+        north: false,
+        east: false,
+        west: true,
+        south: true,
+        visited: false,
+      },
+      {
+        row: 5,
+        col: 5,
+        north: false,
+        east: false,
+        west: false,
+        south: true,
+        visited: false,
+      },
+      {
+        row: 5,
+        col: 6,
+        north: false,
+        east: true,
+        west: false,
+        south: true,
+        visited: false,
+      },
+    ],
+  ],
+};
+
+const maze2 = {
+  rows: 10,
+  cols: 10,
+  start: {
+    row: 0,
+    col: 0,
+    north: true,
+    east: false,
+    west: true,
+    south: false,
+    isCurrentCell: false,
+    isNextCell: false,
+    isStart: true,
+    isGoal: false,
+  },
+  goal: {
+    row: 9,
+    col: 9,
+    north: true,
+    east: true,
+    west: false,
+    south: true,
+    isCurrentCell: false,
+    isNextCell: false,
+    isStart: false,
+    isGoal: true,
+  },
+  maze: [
+    [
+      {
+        row: 0,
+        col: 0,
+        north: true,
+        east: false,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: true,
+        isGoal: false,
+      },
+      {
+        row: 0,
+        col: 1,
+        north: true,
+        east: true,
+        west: false,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 0,
+        col: 2,
+        north: true,
+        east: false,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 0,
+        col: 3,
+        north: true,
+        east: false,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 0,
+        col: 4,
+        north: true,
+        east: true,
+        west: false,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 0,
+        col: 5,
+        north: true,
+        east: true,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 0,
+        col: 6,
+        north: true,
+        east: true,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 0,
+        col: 7,
+        north: true,
+        east: true,
+        west: true,
+        south: false,
+        isCurrentCell: true,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 0,
+        col: 8,
+        north: true,
+        east: false,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 0,
+        col: 9,
+        north: true,
+        east: true,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+    ],
+    [
+      {
+        row: 1,
+        col: 0,
+        north: false,
+        east: true,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 1,
+        col: 1,
+        north: false,
+        east: false,
+        west: true,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 1,
+        col: 2,
+        north: false,
+        east: true,
+        west: false,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 1,
+        col: 3,
+        north: true,
+        east: false,
+        west: true,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 1,
+        col: 4,
+        north: false,
+        east: true,
+        west: false,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 1,
+        col: 5,
+        north: false,
+        east: false,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 1,
+        col: 6,
+        north: false,
+        east: true,
+        west: false,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 1,
+        col: 7,
+        north: false,
+        east: false,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 1,
+        col: 8,
+        north: false,
+        east: false,
+        west: false,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 1,
+        col: 9,
+        north: true,
+        east: true,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+    ],
+    [
+      {
+        row: 2,
+        col: 0,
+        north: false,
+        east: false,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 2,
+        col: 1,
+        north: true,
+        east: false,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 2,
+        col: 2,
+        north: false,
+        east: false,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 2,
+        col: 3,
+        north: true,
+        east: true,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 2,
+        col: 4,
+        north: false,
+        east: true,
+        west: true,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 2,
+        col: 5,
+        north: false,
+        east: true,
+        west: true,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 2,
+        col: 6,
+        north: false,
+        east: false,
+        west: true,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 2,
+        col: 7,
+        north: false,
+        east: true,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 2,
+        col: 8,
+        north: false,
+        east: true,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 2,
+        col: 9,
+        north: true,
+        east: true,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+    ],
+    [
+      {
+        row: 3,
+        col: 0,
+        north: false,
+        east: true,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 3,
+        col: 1,
+        north: true,
+        east: false,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 3,
+        col: 2,
+        north: true,
+        east: false,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 3,
+        col: 3,
+        north: true,
+        east: true,
+        west: false,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 3,
+        col: 4,
+        north: true,
+        east: false,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 3,
+        col: 5,
+        north: true,
+        east: true,
+        west: false,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 3,
+        col: 6,
+        north: true,
+        east: false,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 3,
+        col: 7,
+        north: true,
+        east: false,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 3,
+        col: 8,
+        north: false,
+        east: false,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 3,
+        col: 9,
+        north: false,
+        east: true,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+    ],
+    [
+      {
+        row: 4,
+        col: 0,
+        north: false,
+        east: false,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 4,
+        col: 1,
+        north: false,
+        east: true,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 4,
+        col: 2,
+        north: true,
+        east: false,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 4,
+        col: 3,
+        north: false,
+        east: true,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 4,
+        col: 4,
+        north: false,
+        east: true,
+        west: true,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 4,
+        col: 5,
+        north: false,
+        east: false,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 4,
+        col: 6,
+        north: false,
+        east: true,
+        west: false,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 4,
+        col: 7,
+        north: true,
+        east: false,
+        west: true,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 4,
+        col: 8,
+        north: true,
+        east: false,
+        west: false,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 4,
+        col: 9,
+        north: true,
+        east: true,
+        west: false,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+    ],
+    [
+      {
+        row: 5,
+        col: 0,
+        north: false,
+        east: false,
+        west: true,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 5,
+        col: 1,
+        north: true,
+        east: true,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 5,
+        col: 2,
+        north: false,
+        east: false,
+        west: true,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 5,
+        col: 3,
+        north: true,
+        east: true,
+        west: false,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 5,
+        col: 4,
+        north: true,
+        east: false,
+        west: true,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 5,
+        col: 5,
+        north: false,
+        east: true,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 5,
+        col: 6,
+        north: false,
+        east: true,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 5,
+        col: 7,
+        north: true,
+        east: false,
+        west: true,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 5,
+        col: 8,
+        north: false,
+        east: true,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 5,
+        col: 9,
+        north: false,
+        east: true,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+    ],
+    [
+      {
+        row: 6,
+        col: 0,
+        north: true,
+        east: false,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 6,
+        col: 1,
+        north: true,
+        east: true,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 6,
+        col: 2,
+        north: true,
+        east: true,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 6,
+        col: 3,
+        north: false,
+        east: false,
+        west: true,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 6,
+        col: 4,
+        north: true,
+        east: false,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 6,
+        col: 5,
+        north: true,
+        east: false,
+        west: false,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 6,
+        col: 6,
+        north: false,
+        east: false,
+        west: false,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 6,
+        col: 7,
+        north: true,
+        east: true,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 6,
+        col: 8,
+        north: true,
+        east: true,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 6,
+        col: 9,
+        north: false,
+        east: true,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+    ],
+    [
+      {
+        row: 7,
+        col: 0,
+        north: false,
+        east: false,
+        west: true,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 7,
+        col: 1,
+        north: true,
+        east: true,
+        west: false,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 7,
+        col: 2,
+        north: false,
+        east: true,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 7,
+        col: 3,
+        north: true,
+        east: false,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 7,
+        col: 4,
+        north: true,
+        east: true,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 7,
+        col: 5,
+        north: false,
+        east: true,
+        west: true,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 7,
+        col: 6,
+        north: false,
+        east: false,
+        west: true,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 7,
+        col: 7,
+        north: true,
+        east: false,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 7,
+        col: 8,
+        north: false,
+        east: false,
+        west: false,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 7,
+        col: 9,
+        north: false,
+        east: true,
+        west: false,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+    ],
+    [
+      {
+        row: 8,
+        col: 0,
+        north: true,
+        east: false,
+        west: true,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 8,
+        col: 1,
+        north: false,
+        east: false,
+        west: false,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 8,
+        col: 2,
+        north: false,
+        east: false,
+        west: false,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 8,
+        col: 3,
+        north: false,
+        east: false,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 8,
+        col: 4,
+        north: true,
+        east: false,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 8,
+        col: 5,
+        north: true,
+        east: false,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 8,
+        col: 6,
+        north: true,
+        east: false,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 8,
+        col: 7,
+        north: true,
+        east: false,
+        west: false,
+        south: false,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 8,
+        col: 8,
+        north: false,
+        east: true,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 8,
+        col: 9,
+        north: false,
+        east: true,
+        west: true,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+    ],
+    [
+      {
+        row: 9,
+        col: 0,
+        north: false,
+        east: true,
+        west: true,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 9,
+        col: 1,
+        north: false,
+        east: true,
+        west: true,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 9,
+        col: 2,
+        north: false,
+        east: true,
+        west: true,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 9,
+        col: 3,
+        north: true,
+        east: false,
+        west: true,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 9,
+        col: 4,
+        north: true,
+        east: false,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 9,
+        col: 5,
+        north: true,
+        east: false,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 9,
+        col: 6,
+        north: true,
+        east: false,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 9,
+        col: 7,
+        north: false,
+        east: false,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 9,
+        col: 8,
+        north: true,
+        east: false,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: false,
+      },
+      {
+        row: 9,
+        col: 9,
+        north: true,
+        east: true,
+        west: false,
+        south: true,
+        isCurrentCell: false,
+        isNextCell: false,
+        isStart: false,
+        isGoal: true,
+      },
     ],
   ],
 };
 
 function start() {
   console.log("Javascript is running :)");
+  console.log("Inital maze: ");
+  console.log(maze);
 
-  drawMaze(maze);
-  let solution = solveMaze(maze);
+  //drawMaze(maze);
+  let solution = solveMaze(maze2);
   console.log(solution);
 }
 
 function solveMaze(maze) {
+  drawMaze(maze);
   let solution = [];
   let visited = new Set();
+  let branchList = [];
   let branch = [];
+
+  const cellKey = (cell) => `${cell.col},${cell.row}`;
+  visited.add("0,0");
+  maze.maze[0][0].visited = true;
 
   let onBranch = false;
 
-  let currentCell = maze.maze[maze.start.col][maze.start.row];
+  let currentCell = maze.maze[maze.start.row][maze.start.col];
   let nextCell = null;
 
   const pickRandomNeighbor = () => {
     let newCell = Object.assign({}, currentCell);
-
+    console.log("Picking random neighbor. CurrentCell: ");
     console.log(currentCell);
     const neighbors = getNeighbors(currentCell);
 
     switch (neighbors[Math.floor(Math.random() * neighbors.length)]) {
       case "east":
-        newCell.col = newCell.col + 1;
+        newCell = maze.maze[newCell.row][newCell.col + 1];
+        //newCell.col = newCell.col + 1;
         return newCell;
       case "west":
-        newCell.col = newCell.col - 1;
+        newCell = maze.maze[newCell.row][newCell.col - 1];
+        //newCell.col = newCell.col - 1;
         return newCell;
       case "south":
-        newCell.row = newCell.row + 1;
+        newCell = maze.maze[newCell.row + 1][newCell.col];
+        // newCell.row = newCell.row + 1;
         return newCell;
       case "north":
-        newCell.row = newCell.row - 1;
+        newCell = maze.maze[newCell.row - 1][newCell.col];
+        // newCell.row = newCell.row - 1;
         return newCell;
     }
   };
@@ -132,23 +1731,66 @@ function solveMaze(maze) {
     return validDirections;
   };
 
-  while (currentCell !== maze.goal) {
+  while (
+    currentCell.col !== maze.goal.col ||
+    currentCell.row !== maze.goal.row
+  ) {
     nextCell = pickRandomNeighbor();
 
     let validNeighbors = getNeighbors(currentCell);
 
-    if (validNeighbors.length > 1) {
-      onBranch = true;
-    }
-
-    const cellKey = (cell) => `${cell.col},${cell.row}`;
     const nextCellKey = cellKey(nextCell);
 
     if (!visited.has(nextCellKey)) {
+      if (validNeighbors.length > 2) {
+        let cells = [];
+        validNeighbors.forEach((direction) => {
+          switch (direction) {
+            case "east":
+              cells.push(maze.maze[currentCell.row][currentCell.col + 1]);
+              break;
+            case "west":
+              cells.push(maze.maze[currentCell.row][currentCell.col - 1]);
+              break;
+            case "south":
+              cells.push(maze.maze[currentCell.row + 1][currentCell.col]);
+              break;
+            case "north":
+              cells.push(maze.maze[currentCell.row - 1][currentCell.col]);
+              break;
+          }
+        });
+        console.log("Neighbors of current cell");
+        console.log(cells);
+
+        if (getVisitedNeighborsCount(cells, visited) != 2) {
+          if (onBranch) {
+            branchList.push(branch);
+            branch = [];
+          }
+          onBranch = true;
+        }
+      }
+
+      if (currentCell.col == 0 && currentCell.row == 2) {
+        console.log("here");
+      }
+
+      function getVisitedNeighborsCount(array, set) {
+        let visited = 0;
+        array.forEach((cell) => {
+          if (set.has(`${cell.col},${cell.row}`)) {
+            visited++;
+          }
+        });
+        return visited;
+      }
+
       if (nextCell.col > currentCell.col) {
         console.log("Going east");
         solution.push(nextCell);
         visited.add(nextCellKey);
+        maze.maze[nextCell.row][nextCell.col].visited = true;
         if (onBranch) {
           branch.push(nextCell);
         }
@@ -158,6 +1800,7 @@ function solveMaze(maze) {
         console.log("Going west");
         solution.push(nextCell);
         visited.add(nextCellKey);
+        maze.maze[nextCell.row][nextCell.col].visited = true;
         if (onBranch) {
           branch.push(nextCell);
         }
@@ -167,6 +1810,7 @@ function solveMaze(maze) {
         console.log("Going north");
         solution.push(nextCell);
         visited.add(nextCellKey);
+        maze.maze[nextCell.row][nextCell.col].visited = true;
         if (onBranch) {
           branch.push(nextCell);
         }
@@ -175,27 +1819,50 @@ function solveMaze(maze) {
         console.log("Going south");
         solution.push(nextCell);
         visited.add(nextCellKey);
+        maze.maze[nextCell.row][nextCell.col].visited = true;
         if (onBranch) {
           branch.push(nextCell);
         }
       }
-    } else {
+
+      console.log("End of if !visited statement. Next Cell:");
+      console.log(nextCell);
+
+      currentCell = nextCell;
+    }
+
+    if (validNeighbors.length == 1) {
+
+        if (branchList.length == 0){
+            branchList.push(branch)
+        }
+
       for (let i = 0; i < solution.length; i++) {
         if (branch.includes(solution[i])) {
+          let temp = solution[i];
+          maze.maze[solution[i].row][solution[i].col].visited = false;
           solution.splice(i, 1);
           i--;
         }
       }
 
-      branch = [];
-      currentCell = solution[solution.length - 1];
-      onBranch = false;
+      if (branchList.length >= 1) {
+        branch = branchList[branchList.length - 1]
+        branchList.pop();
+        console.log("branchList:");
+        console.log(branchList);
+      } else {
+        branch = [];
+        currentCell = solution[solution.length - 1];
+        onBranch = false;
+        console.log("branchList:");
+        console.log(branchList);
+      }
     }
 
-    console.log(nextCell);
-
-    currentCell = nextCell;
+    drawMaze(maze);
   }
+  console.log("While loop finished");
   return solution;
 }
 
@@ -203,17 +1870,21 @@ function drawMaze(maze) {
   const mazeContainer = document.getElementById("maze-container");
   mazeContainer.innerHTML = "";
 
-  const colSize = maze.cols - 1; //Might have to remove the "- 1" after implementing the feature in MazeGenerator
+  const colSize = maze.cols;
   const rowSize = maze.rows;
 
-  for (let i = 0; i < colSize; i++) {
+  for (let i = 0; i < rowSize; i++) {
     const row = document.createElement("row");
     row.classList.add("row");
     mazeContainer.appendChild(row);
 
-    for (let j = 0; j < rowSize; j++) {
+    for (let j = 0; j < colSize; j++) {
       const cell = document.createElement("cell");
       cell.classList.add("cell");
+
+      if (maze.maze[i][j].visited) {
+        cell.classList.add("visited");
+      }
 
       if (maze.maze[i][j].north) {
         cell.classList.add("up");
@@ -230,7 +1901,6 @@ function drawMaze(maze) {
       if (maze.maze[i][j].west) {
         cell.classList.add("left");
       }
-
       row.appendChild(cell);
     }
   }
