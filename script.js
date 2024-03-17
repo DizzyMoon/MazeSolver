@@ -1664,7 +1664,7 @@ function start() {
   console.log(maze);
 
   //drawMaze(maze);
-  let solution = solveMaze(maze2);
+  let solution = solveMaze(maze);
   console.log(solution);
 }
 
@@ -1764,10 +1764,11 @@ function solveMaze(maze) {
         console.log(cells);
 
         if (getVisitedNeighborsCount(cells, visited) != 2) {
+          branchList.push(branch);
           if (onBranch) {
-            branchList.push(branch);
             branch = [];
           }
+
           onBranch = true;
         }
       }
@@ -1832,11 +1833,6 @@ function solveMaze(maze) {
     }
 
     if (validNeighbors.length == 1) {
-
-        if (branchList.length == 0){
-            branchList.push(branch)
-        }
-
       for (let i = 0; i < solution.length; i++) {
         if (branch.includes(solution[i])) {
           let temp = solution[i];
@@ -1845,19 +1841,9 @@ function solveMaze(maze) {
           i--;
         }
       }
-
-      if (branchList.length >= 1) {
-        branch = branchList[branchList.length - 1]
-        branchList.pop();
-        console.log("branchList:");
-        console.log(branchList);
-      } else {
-        branch = [];
-        currentCell = solution[solution.length - 1];
-        onBranch = false;
-        console.log("branchList:");
-        console.log(branchList);
-      }
+      branch = [];
+      currentCell = solution[solution.length - 1];
+      onBranch = false;
     }
 
     drawMaze(maze);
